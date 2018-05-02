@@ -10,9 +10,11 @@ Library  SauceLabs.py
     ...  version: %{version},
     ...  name: Robot Sauce Test
 
+${SAUCE_USERNAME}   williamjablonski
+${SAUCE_ACCESS_KEY}  0f7989c8-6a8a-446f-9148-0c89b6b65de9
 ${BROWSER}          %{ROBOT_BROWSER}
 ${CAPABILITIES}     ${EMPTY.join(${_tmp})} 
-${KEY}              %{SAUCE_USERNAME}:%{SAUCE_ACCESS_KEY}
+${KEY}              ${SAUCE_USERNAME}:${SAUCE_ACCESS_KEY}
 ${REMOTE_URL}       http://${KEY}@ondemand.saucelabs.com:80/wd/hub
 ${PAGE_TITLE}       Sauce Labs: Login
 
