@@ -21,6 +21,7 @@ ${PAGE_TITLE}       Sauce Labs: Login
 *** Keywords ***
 
 Open test browser
+    Set Environment Variable   webdriver.gecko.driver   /usr/local/bin/geckodriver
     Open browser  https://saucelabs.com/login/  browser=${BROWSER}
     ...  remote_url=${REMOTE_URL}
     ...  desired_capabilities=${CAPABILITIES}
