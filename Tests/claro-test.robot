@@ -13,12 +13,28 @@ SMOKE TEST - Validar menú izquierdo
     Then muestra la opción de 'inicio' en el menú izquierdo
     Then muestra la opción de 'Rechazos' en el menú izquierdo
     Then muestra la opción de 'Auditoría Rechazos' en el menú izquierdo
-    
+   
+   
 SMOKE TEST - Validar navegación menú inicio
     Given el sitio está abierto
-    When En el menú Inicio
+    When En el menú 'Inicio'
     Then yo soy enviado a la pagina '$URL\Inicio'
     Then la pantalla Inicio presenta el titulo 'Inicio'
+    
+#    Rechazos    
+SMOKE TEST - Validar navegación menú Rechazos
+    Given el sitio está abierto
+    When En el menú 'Rechazos'
+    Then yo soy enviado a la pagina '$URL\ValidacionRechazo'
+    Then la pantalla Inicio presenta el titulo 'Rechazos'
+    
+    
+#   Auditoría Rechazos  
+SMOKE TEST - Validar navegación menú Auditoría Rechazos
+    Given el sitio está abierto
+    When En el menú 'Auditoría Rechazos'
+    Then yo soy enviado a la pagina '$URL\AuditoriaRechazo'
+    Then la pantalla Inicio presenta el titulo 'Auditoría Rechazos'
 
 
 *** Keywords ***
