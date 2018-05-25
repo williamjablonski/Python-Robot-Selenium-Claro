@@ -28,6 +28,17 @@ SMOKE TEST - Validar navegación menú Rechazos
     Then yo soy enviado a la pagina '$URL\ValidacionRechazo'
     Then la pantalla Inicio presenta el titulo 'Rechazos'
     
+SMOKE TEST - VALIDAR campos de la pantalla rechazos
+    Given el sitio está abierto
+    When En el menú 'Rechazos'
+    Then se muestra el campo 'Trámite'
+    Then se muestra el campo 'Causal'
+    Then se muestra el campo 'Fecha Inicial'
+    Then se muestra el campo 'Fecha Final'
+    Then se muestra el campo 'Tipo Documento'
+    Then se muestra el campo 'Número Documento'
+    Then se muestra el campo 'Min:'
+
     
 #   Auditoría Rechazos  
 SMOKE TEST - Validar navegación menú Auditoría Rechazos
